@@ -33,6 +33,8 @@ git status
 git show
 git log archivo             # revisar historial de cambios
 git log --stat
+alias arbol = "git log --all --graph --decorate --oneline"
+
 
 /* Generar una Rama */
 git branch "nombre_rama"
@@ -55,4 +57,7 @@ eval $(ssh-agent -s)                                            # Evaluar si el 
 ssh-add ~/.ssh/"nombre_clave_privada"                           # Agregar la llave al sistema
 Recordar que adicionalmente tiene la clave que solo tu conoces
 
+/* Tags */
+git tag -a v0.1 -m "Tag" d27e8d5
+git show-ref --tags         # Permite ver la referencia de cada tag 
 
