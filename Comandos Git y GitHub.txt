@@ -11,10 +11,12 @@ git config --list --show-origin         # muestra donde estan las config
 git config --global user.name "nombre"
 git config --global user.email "correo"
 
-/* Hacer Commit */
+/* Cambios y fusiones */
 git commit -m "Mensaje de commit"
 git commit -a               # Permite añadir al staged y hacer commit
 git commit -am "Mensaje"    # Añade a staged y hace commit con mensaje
+git merge rama_fuente       # Trae los cambios de rama_fuente a la rama actual
+git branch -M main          # Lleva la version de la rama master a la rama main
 
 /* Ir a una version */
 git checkout token --archivo de interes
