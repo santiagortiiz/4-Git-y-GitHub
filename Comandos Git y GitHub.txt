@@ -13,8 +13,8 @@ git config --global user.email "correo"
 
 /* Hacer Commit */
 git commit -m "Mensaje de commit"
+git commit -a               # Permite añadir al staged y hacer commit
 
-git log archivo             # revisar historial de cambios
 
 /* Revision de una version */
 git checkout token --archivo de interes
@@ -23,7 +23,8 @@ git checkout master         # volver a la version principal
 /* Revision de cambios */
 git status
 git show
-git log
+git log archivo             # revisar historial de cambios
 git log --stat
+
 
  
