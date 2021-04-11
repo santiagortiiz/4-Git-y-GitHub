@@ -49,3 +49,11 @@ git pull origin main        # Trae contenido ya relacionado (existente)
 /* Cambios y Fusiones */
 git push origin master:main
 
+/* Llaves Públicas y Privadas */
+ssh-keygen -t rsa -b 4096 -C "santiago.ortizc@udea.edu.co"      # Crear claves
+eval $(ssh-agent -s)                                            # Evaluar si el proceso de gestion SSH esta activo
+ssh-add ~/.ssh/"nombre_clave_privada"                           # Agregar la llave al sistema
+Recordar que adicionalmente tiene la clave que solo tu conoces
+ # Valida que este activo ssh agent
+
+
