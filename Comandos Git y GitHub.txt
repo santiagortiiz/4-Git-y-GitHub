@@ -1,3 +1,9 @@
+/*
+GIT Vitalbox
+user.name=VitalBox_BitBucket
+user.email=santiago.ortiz@vitalbox.co
+*/
+
 git init                    # Crear repositorio
 git status                  # Revisa el estado del repositorio
 git add                     # Añade archivos al registro
