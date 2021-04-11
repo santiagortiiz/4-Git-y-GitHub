@@ -21,6 +21,9 @@ git checkout token --archivo de interes
 git checkout master         # volver a la version principal
 
 /* Revision de cambios */
+git status
+git show
 git log
 git log --stat
+
  
