@@ -49,6 +49,7 @@ gitk        # Permite visualizar cambios graficamente
 /*** GitHub ***/
 
 /* Clonar en repositorio local */
+git clone URL
 git remote add origin https://github.com/santiagortiiz/4-Git-y-GitHub.git
 git remote                  # Inspeccionar repositorios remotos
 git pull origin main --allow-unrelated-histories    # Traer contenido sin relacion de github al repositorio local
@@ -66,6 +67,7 @@ Recordar que adicionalmente tiene la clave que solo tu conoces
 /* Tags */
 git tag                     # Muestra los tags existentes
 git tag -a v0.1 -m "Tag" d27e8d5
+git push origin --tags
 git show-ref --tags         # Permite ver la referencia de cada tag 
 git tag -d nombre_tag_a_eliminar    # Permite eliminar un tag
 git push origin :refs/tags/nombre_tag_a_eliminar    # Elimina el Tag de GitHub
