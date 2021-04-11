@@ -14,6 +14,7 @@ git config --global user.email "correo"
 /* Hacer Commit */
 git commit -m "Mensaje de commit"
 git commit -a               # Permite añadir al staged y hacer commit
+git commit -am "Mensaje"    # Añade a staged y hace commit con mensaje
 
 /* Ir a una version */
 git checkout token --archivo de interes
