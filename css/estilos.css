@@ -33,3 +33,10 @@ body {
 #container h1 {
     font-size: 20px;
 }
+
+#footer {
+    background-color: #777;
+    color: wheat;
+    text-align: center;
+    padding: 00.5em;
+}
