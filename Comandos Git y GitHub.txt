@@ -19,4 +19,8 @@ git log archivo             # revisar historial de cambios
 /* Revision de una version */
 git checkout token --archivo de interes
 git checkout master         # volver a la version principal
+
+/* Revision de cambios */
+git log
+git log --stat
  
