@@ -1,17 +1,19 @@
-git init            # Crear repositorio
-git status          # Revisa el estado del repositorio
+git init                    # Crear repositorio
+git status                  # Revisa el estado del repositorio
 git add                     # Añade archivos al registro
 git add .                   # Añade todos los archivos al registro
 git rm --cached archivo     # saca el archivo del registro
 
 /* Configuracion de Git */
-git config          # Muestra las configuraciones como funcionan
-git config --list   # muestra las config por defecto y lo que falta
-git config --list --show-origin # muestra donde estan las config
+git config                  # Muestra las configuraciones como funcionan
+git config --list           # muestra las config por defecto y lo que falta
+git config --list --show-origin         # muestra donde estan las config
 git config --global user.name "nombre"
 git config --global user.email "correo"
 
+/* Hacer Commit */
 git commit -m "Mensaje de commit"
 
-
+git log archivo             # revisar historial de cambios
+/* Retomando 11/04/2021 */
  
