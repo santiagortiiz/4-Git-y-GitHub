@@ -58,6 +58,8 @@ ssh-add ~/.ssh/"nombre_clave_privada"                           # Agregar la lla
 Recordar que adicionalmente tiene la clave que solo tu conoces
 
 /* Tags */
+git tag                     # Muestra los tags existentes
 git tag -a v0.1 -m "Tag" d27e8d5
 git show-ref --tags         # Permite ver la referencia de cada tag 
-
+git tag -d nombre_tag_a_eliminar    # Permite eliminar un tag
+git push origin :refs/tags/nombre_tag_a_eliminar    # Elimina el Tag de GitHub
