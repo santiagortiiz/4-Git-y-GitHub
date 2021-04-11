@@ -43,6 +43,9 @@ git show-branch
 git show-branch --all
 gitk        # Permite visualizar cambios graficamente
  
+
+
+
 /*** GitHub ***/
 
 /* Clonar en repositorio local */
