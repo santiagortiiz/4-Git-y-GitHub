@@ -36,9 +36,12 @@ git log --stat
 alias arbol = "git log --all --graph --decorate --oneline"
 
 
-/* Generar una Rama */
+/* Ramas */
 git branch "nombre_rama"
 git checkout -b "nombre_rama"
+git show-branch
+git show-branch --all
+gitk        # Permite visualizar cambios graficamente
  
 /*** GitHub ***/
 
