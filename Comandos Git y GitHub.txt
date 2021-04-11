@@ -15,10 +15,9 @@ git config --global user.email "correo"
 git commit -m "Mensaje de commit"
 git commit -a               # Permite añadir al staged y hacer commit
 
-
-/* Revision de una version */
+/* Ir a una version */
 git checkout token --archivo de interes
-git checkout master         # volver a la version principal
+git checkout master         
 
 /* Revision de cambios */
 git status
@@ -26,5 +25,7 @@ git show
 git log archivo             # revisar historial de cambios
 git log --stat
 
-
+/* Generar una Rama */
+git branch "nombre_rama"
+git checkout -b "nombre_rama"
  
