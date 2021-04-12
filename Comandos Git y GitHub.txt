@@ -51,6 +51,7 @@ gitk        # Permite visualizar cambios graficamente
 /* Clonar en repositorio local */
 git clone URL
 git remote add origin https://github.com/santiagortiiz/4-Git-y-GitHub.git
+git remote add upstream URL
 git remote                  # Inspeccionar repositorios remotos
 git pull origin main --allow-unrelated-histories    # Traer contenido sin relacion de github al repositorio local
 git pull origin main        # Trae contenido ya relacionado (existente)
