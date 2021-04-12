@@ -38,6 +38,7 @@ alias arbol = "git log --all --graph --decorate --oneline"
 
 /* Ramas */
 git branch "nombre_rama"
+git branch -D "nombre_rama"     # Elimina la rama
 git checkout -b "nombre_rama"
 git show-branch
 git show-branch --all
@@ -73,11 +74,75 @@ git show-ref --tags         # Permite ver la referencia de cada tag
 git tag -d nombre_tag_a_eliminar    # Permite eliminar un tag
 git push origin :refs/tags/nombre_tag_a_eliminar    # Elimina el Tag de GitHub
 
-/* Parches sobre ramas */
+/* REBASE (parches sobre ramas) */
 PRIMERO SE LE HACE REBASE A LA RAMA QUE 
 DESAPARECERA DE LA HISTORIA Y LUEGO SE LE 
 HACE REBASE A LA RAMA PRINCIPAL
 (DE LO CONTRARIO SE ENTRA EN UN CONFLICTO
 QUE SOLO SE ARREGLA CON GIT RESET)
+
 git rebase master (estando en la rama experimental)     # "Similar a un pull hacia la rama experimental
 git rebase experimental (estando en la rama master)     # Une la rama experimental a la master
+
+/* STASH (Almacenamiento temporal) */
+Cuando quiero guardar modificaciones en un lugar sin hacerles
+commit, e ir a otra rama para inspeccionar
+
+Guardar cambios
+git stash
+"puedo ir a otra rama"
+"al volver no veo los cambios a los que no les hice commit"
+git stash pop       # Regresa los cambios que deje en memoria temporal con stash
+
+git stash branch branch_name        # Si deseo mandar los cambios temporales a una nueva rama
+                                    # debo hacer commit en la nueva rama
+
+Si decido no conservar cambios LUEGO DE Guardar
+git stash
+git stash list
+git stash drop
+git stash list
+
+/* Limpiar Estructura del proyecto */
+git clean # eliminar archivos que no se han agregado y que no estan en gitignore
+git clean --dry-run     # Simula git clean sin ejecutarse
+git clean -df           # Ejecucion del comando borrando directorios (d) y archivos (f)
+
+/* Merge de 1 Commit */
+git cherry-pick hash_del_commit_de_interes
+Sin embargo al hacer Merge de la rama master con el
+commit completo de la rama externa, habra un CONFLICTO
+con el commit particular que ya se agrego
+
+/* Correccion de un Commit */
+git commit --amend
+
+
+/* VOLVER A UNA VERSION ANTERIOR */
+git reflog # Muestra absolutamente toda la historial
+COPIAR EL HASH o HEAD@{x} DE INTERES
+git reset --HARD/SOFT head@{x}  # soft mantiene lo que esta en staged
+
+/* Busqueda de REG_EXP */
+git grep regExp
+git grep -n regExp  # Lineas en las que se menciona
+git grep -c regExp  # Cuenta la cantidad de veces que se usa
+git grep "<p>"
+
+/* BUSQUEDA EN LA HISTORIA DE COMMITS */
+git log -S "regExp"
+
+/* COMANDOS ADICIONALES */
+git shortlog: Ver cuantos commits a hecho los miembros del equipo
+git shortlog -sn: Las personas que han hecho ciertos commits
+git shortlog -sn --all: Todos los commits (también los borrados)
+git shortlog -sn --all --no-merges: muestra las estadisticas de los comigs del repositorio donde estoy
+git config --global alias.stats “shortlog -sn --all --no-merges”: configura el comando “shortlog -sn --all --no-merges” en un Alias en las configuraciones globales de git del pc
+git blame -c blogpost.html: Muestra quien ha hecho cambios en dicho archivo identado
+git blame --help: Muestra en el navegador el uso del comando
+git blame archivo -L 35, 60 -c: Muestra quien escribio el codigo con informacion de la linea 35 a la 60, EJ: git blame css/estilos.css -L 35, 60 -c
+git branch -r: Muestra las Ramas remotas de GitHub
+git branch -a: Muestra todas las Ramas del repo y remotas de GitHub
+
+/* Ayudas */
+git comando --help
