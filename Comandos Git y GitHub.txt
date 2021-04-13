@@ -49,6 +49,10 @@ gitk        # Permite visualizar cambios graficamente
 
 /*** GitHub ***/
 
+/* gitignore */
+crear archivo .gitignore
+poner extensiones a ignorar
+
 /* Clonar en repositorio local */
 git clone URL
 git remote add origin https://github.com/santiagortiiz/4-Git-y-GitHub.git
