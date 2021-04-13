@@ -69,6 +69,7 @@ ssh-keygen -t rsa -b 4096 -C "correo"                           # Crear claves
 eval $(ssh-agent -s)                                            # Evaluar si el proceso de gestion SSH esta activo
 ssh-add ~/.ssh/"nombre_clave_privada"                           # Agregar la llave al sistema
 Recordar que adicionalmente tiene la clave que solo tu conoces
+git remote set-url origin URL_SSH_REPOSITORIO
 
 /* Tags */
 git tag                     # Muestra los tags existentes
